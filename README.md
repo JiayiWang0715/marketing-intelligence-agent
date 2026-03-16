@@ -1,93 +1,57 @@
 # AI Marketing Intelligence Pipeline
 
-An AI-driven system for analyzing advertisement datasets and extracting structured marketing strategy insights.
+An end-to-end AI system that extracts structured marketing insights from advertisement datasets.
 
 ## Overview
 
-This project implements a modular pipeline that processes advertisement images and metadata to generate structured marketing intelligence. The system combines image feature extraction, text analysis, clustering-based strategy discovery, and automated analytics.
+This project builds a full pipeline for transforming raw advertisement images and metadata into structured marketing intelligence.
 
-The pipeline converts raw advertisement data into structured insights that can support marketing analysis and strategic decision-making.
+The system integrates computer vision feature extraction, natural language processing, strategy clustering, and analytics to identify recurring marketing strategies across advertisement campaigns.
 
-## My Contribution
+## My Role
 
-I served as the primary developer for the data processing, strategy clustering, analytics, and retrieval-based analysis components of the system.
+I served as the primary developer responsible for building the core data processing pipeline, clustering workflow, and analytics components.
 
-My work focused on:
+My work included:
 
-* designing the overall pipeline workflow
-* implementing data processing and storage
-* building clustering-based marketing strategy discovery
-* integrating a retrieval-based assistant for querying marketing insights
+* designing the end-to-end data pipeline
+* implementing dataset construction and storage
+* developing clustering workflows to identify marketing strategy patterns
+* integrating analytics and retrieval-based querying
 
-Some modules such as image feature extraction and basic NLP preprocessing were implemented as part of the broader system architecture.
+## System Architecture
 
-## System Pipeline
+The pipeline processes advertisement data through the following stages:
 
-The system processes advertisement data through the following stages:
+1. Data collection from annotated JSON advertisement datasets
+2. Image feature extraction (OCR, layout analysis, dominant color features)
+3. Text processing and sentiment analysis
+4. Dataset construction and storage in SQLite
+5. Strategy clustering to identify recurring marketing patterns
+6. Analytics and insight generation
+7. Retrieval-based querying over marketing strategy insights
 
-1. **Data Collection**
+## Technologies
 
-   * Load annotated advertisement metadata from JSON files.
+Python
+pandas
+OpenCV
+pytesseract OCR
+scikit-learn clustering
+SQLite
+LLM-based retrieval assistant
 
-2. **Image Feature Enrichment**
+## Example Pipeline
 
-   * Extract OCR text from images.
-   * Analyze layout and visual features.
-   * Extract dominant color features.
+The full pipeline can be executed through the following notebooks:
 
-3. **Data Storage**
+* build_master_dataset.ipynb
+* run_cv_pipeline.ipynb
+* run_nlp_pipeline.ipynb
+* run_clustering.ipynb
+* run_database_pipeline.ipynb
+* run_full_pipeline.ipynb
 
-   * Store enriched data in a SQLite database for efficient querying.
+## Applications
 
-4. **Strategy Discovery**
-
-   * Apply clustering methods to identify recurring marketing strategies across advertisements.
-
-5. **Analytics**
-
-   * Generate structured insights on marketing patterns.
-
-6. **Retrieval-based Analysis**
-
-   * Use a retrieval pipeline to support natural-language queries over the marketing dataset.
-
-## Tech Stack
-
-* Python
-* pandas
-* scikit-learn
-* SQLite
-* pytesseract (OCR)
-* OpenCV
-* LLM-based analysis (RAG prototype)
-
-## Project Structure
-
-cv/
-Image feature extraction modules (OCR, layout analysis, color extraction)
-
-nlp/
-Text preprocessing and sentiment analysis modules
-
-strategy_clustering/
-Clustering algorithms for identifying marketing strategy patterns
-
-analytics/
-Statistical analysis and dataset insights
-
-rag/
-Retrieval-based assistant for querying marketing insights
-
-database/
-SQLite data storage scripts
-
-data/
-Processed advertisement datasets
-
-## Example Output
-
-The system can automatically identify patterns such as:
-
-* common visual design strategies across campaigns
-* dominant marketing themes in different industries
-* correlations between visual style and sentiment
+This system demonstrates how AI pipelines can transform unstructured marketing data into structured strategic insights.
